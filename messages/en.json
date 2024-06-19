@@ -1,0 +1,23 @@
+{
+    "Navigation": {
+        "home": {
+            "titolo": "Home",
+            "url": "/"
+        },
+        "azienda": {
+            "titolo": "Company",
+            "url": "/company"
+        },
+        "lavora_con_noi": {
+            "titolo": "Work with us",
+            "url": "/work_with_us"
+        },
+        "contatti": {
+            "titolo": "Contacts",
+            "url": "/#contatti"
+        }
+    },
+    "home": {
+        "titolo": "HomeENG"
+    }
+}

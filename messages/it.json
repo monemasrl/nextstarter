@@ -1,0 +1,23 @@
+{
+    "Navigation": {
+        "home": {
+            "titolo": "Home",
+            "url": "/"
+        },
+        "azienda": {
+            "titolo": "Azienda",
+            "url": "/azienda"
+        },
+        "lavora_con_noi": {
+            "titolo": "Lavora con noi",
+            "url": "/lavora_con_noi"
+        },
+        "contatti": {
+            "titolo": "Contatti",
+            "url": "/#contatti"
+        }
+    },
+    "home": {
+        "titolo": "Home"
+    }
+}
