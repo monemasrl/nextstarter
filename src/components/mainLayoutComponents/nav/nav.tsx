@@ -74,8 +74,8 @@ function NavBar() {
         >
           <div className={style.mainNavBar__navBlock__topData}>
             Via della Stazione 27, Barga -{" "}
-            <a href="tel:+390583711372">0583 711372</a> -{" "}
-            <a href="mailto:info@vtservices.it">info@vtservices.it</a>
+            <a href="tel:+390583711372">0575 1122334</a> -{" "}
+            <a href="mailto:info@vtservices.it">info@simplesite.it</a>
           </div>
           <hr />
           <ul className={style.mainNavBar__navBlock__nav}>

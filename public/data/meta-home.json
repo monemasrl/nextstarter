@@ -1,22 +1,22 @@
 {
     "it": {
         "metaHtml": {
-            "title": "VTServices website",
-            "description": "Commissioning, qualification, validation. Da oltre 20 anni, un servizio di prim'ordine. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
-            "keywords": "VTServices, Commissioning, qualification, validation, technical services",
+            "title": "simple website",
+            "description": "Lorem impsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum libero nec, ultrices nunc. Nulla facilisi. Nullam nec nunc nec nunc.",
+            "keywords": "keyword1, keyword2, keyword3",
             "openGraph": {
-                "title": "VTServices website",
-                "description": "Commissioning, qualification, validation. Da oltre 20 anni, un servizio di prim'ordine. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
+                "title": "simple website",
+                "description": "Lorem impsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum libero nec, ultrices nunc. Nulla facilisi. Nullam nec nunc nec nunc.",
                 "type": "website",
                 "locale": "it_IT",
-                "url": "https://vtservices.it/",
-                "siteName": "VTServices",
+                "url": "https://test.it/",
+                "siteName": "simple website",
                 "images": [
                     {
                         "url": "/image/og-image.jpg",
                         "width": 1200,
                         "height": 630,
-                        "alt": "VTServices website"
+                        "alt": "simple website"
                     }
                 ]
             }
@@ -25,14 +25,14 @@
             "@context": "https://schema.org",
             "@type": "Organization",
             "image": [
-                "https://vtservices.it//image/4_3graph.jpg",
-                "https://vtservices.it//image/mainimage.jpg"
+                "https://test.it//image/4_3graph.jpg",
+                "https://test.it//image/mainimage.jpg"
             ],
-            "name": "VTServices",
+            "name": "simple website",
             "address": [
                 {
                     "@type": "PostalAddress",
-                    "streetAddress": " via della Stazione 27 Mologno Barga",
+                    "streetAddress": " via della stranezza 27 Mologno Barga",
                     "addressLocality": "Lucca",
                     "addressRegion": "Toscana",
                     "postalCode": "55051",
@@ -40,36 +40,36 @@
                 },
                 {
                     "@type": "PostalAddress",
-                    "streetAddress": "8000 Avalon Blvd, Suite 100 and 200",
-                    "addressLocality": "Alpharetta",
-                    "addressRegion": "Atlanta",
-                    "postalCode": "30009",
-                    "addressCountry": "GA"
+                    "streetAddress": "via della figata totale 27 Mologno Barga",
+                    "addressLocality": "liguria",
+                    "addressRegion": "Genova",
+                    "postalCode": "123213",
+                    "addressCountry": "GE"
                 }
             ],
-            "url": "https://vtservices.it/",
+            "url": "https://test.it/",
             "telephone": "+320583711372",
-            "email": "info@vtservices.it"
+            "email": "info@test.it"
         }
     },
     "en": {
         "metaHtml": {
-            "title": "VTServices website",
-            "description": "First-class service for over 20 years, our flexibility and willingness to adapt to customer requests are what make us an excellence in our sector.",
-            "keywords": "VTServices, Commissioning, qualification, validation, technical services",
+            "title": "simple website",
+            "description": "Lorem impsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum libero nec, ultrices nunc. Nulla facilisi. Nullam nec nunc nec nunc.",
+            "keywords": "keyword1, keyword2, keyword3",
             "openGraph": {
-                "title": "VTServices website",
-                "description": "First-class service for over 20 years, our flexibility and willingness to adapt to customer requests are what make us an excellence in our sector.",
+                "title": "simple website",
+                "description": "Lorem impsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum libero nec, ultrices nunc. Nulla facilisi. Nullam nec nunc nec nunc.",
                 "type": "website",
-                "locale": "en_US",
-                "url": "https://vtservices.it/",
-                "siteName": "VTServices",
+                "locale": "it_IT",
+                "url": "https://test.it/",
+                "siteName": "simple website",
                 "images": [
                     {
                         "url": "/image/og-image.jpg",
                         "width": 1200,
                         "height": 630,
-                        "alt": "VTServices website"
+                        "alt": "simple website"
                     }
                 ]
             }
@@ -78,14 +78,14 @@
             "@context": "https://schema.org",
             "@type": "Organization",
             "image": [
-                "https://vtservices.it/image/4_3graph.jpg",
-                "https://vtservices.it/image/mainimage.jpg"
+                "https://test.it//image/4_3graph.jpg",
+                "https://test.it//image/mainimage.jpg"
             ],
-            "name": "VTServices",
+            "name": "simple website",
             "address": [
                 {
                     "@type": "PostalAddress",
-                    "streetAddress": " via della Stazione 27 Mologno Barga",
+                    "streetAddress": " via della stranezza 27 Mologno Barga",
                     "addressLocality": "Lucca",
                     "addressRegion": "Toscana",
                     "postalCode": "55051",
@@ -93,16 +93,16 @@
                 },
                 {
                     "@type": "PostalAddress",
-                    "streetAddress": "8000 Avalon Blvd, Suite 100 and 200",
-                    "addressLocality": "Alpharetta",
-                    "addressRegion": "Atlanta",
-                    "postalCode": "30009",
-                    "addressCountry": "GA"
+                    "streetAddress": "via della figata totale 27 Mologno Barga",
+                    "addressLocality": "liguria",
+                    "addressRegion": "Genova",
+                    "postalCode": "123213",
+                    "addressCountry": "GE"
                 }
             ],
-            "url": "https://vtservices.it/",
+            "url": "https://test.it/",
             "telephone": "+320583711372",
-            "email": "info@vtservices.it"
+            "email": "info@test.it"
         }
     }
 }

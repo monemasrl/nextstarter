@@ -1,4 +1,10 @@
 {
+    "generics": {
+        "tel": "Telefono",
+        "telNumber": "+39 123 4567890",
+        "email": "Email",
+        "emailAddress": "info@simplesite.it"
+    },
     "Navigation": {
         "home": {
             "titolo": "Home",

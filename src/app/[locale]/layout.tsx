@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
-
+/** FUNZIONE NEXT PER INSERIRE I METADATA NELL' HEAD */
 export async function generateMetadata({
   params: { locale },
 }: {
@@ -33,9 +33,11 @@ export default async function RootLayout({
 }>) {
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
+
   return (
     <html lang="en">
       <head>
+        {/* COMPONENTE PER INSERIRE I META JSONLD PER GOOGLE  */}
         <JsonldMetaData metadata={meta} />
       </head>
       <body className={inter.className}>
