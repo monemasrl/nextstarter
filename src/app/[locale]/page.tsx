@@ -3,6 +3,7 @@ import styles from "./page.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import heroData from "../../../public/data/hero.json";
+import Parallax from "@/components/parallax/parallax";
 
 /**
  * PAGINA
@@ -24,6 +25,7 @@ export default async function Home({
     <main className={styles.main}>
       {t("titolo")}
       <HeroVideo videoURL={"/video/vts.mp4"} data={HeroDataLang} />
+      <Parallax imageURL="/image/mainimage.jpg" alt="test" height="300px" />
     </main>
   );
 }
