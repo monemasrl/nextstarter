@@ -4,6 +4,13 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import heroData from "../../../public/data/hero.json";
 
+/**
+ * PAGINA
+ * Utilizzare le pagine per fetchare i dati e passarli ai componenti
+ * Mantenere le pagine componenti server-side
+ * Passare i dati ai componenti tramite props
+ */
+
 export default async function Home({
   params: { locale },
 }: {
