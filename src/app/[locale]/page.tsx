@@ -5,6 +5,8 @@ import { getTranslations } from "next-intl/server";
 import heroData from "../../../public/data/hero.json";
 import Parallax from "@/components/parallax/parallax";
 import AnimatedSection from "@/components/mainLayoutComponents/sections/animatedSection";
+import LeafletMain from "@/components/map/Leaflet";
+import SliderTimer from "@/components/sliders/sliderTimer";
 
 /**
  * PAGINA
@@ -19,16 +21,33 @@ export default async function Home({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const t = await getTranslations("home");
+  const t = await getTranslations("generics");
   const HeroDataLang = heroData[locale as keyof typeof heroData];
-
+  const address = {
+    city: t("cittaName"),
+    street: t("indirizzoName"),
+    number: t("numeroCivicoName"),
+  };
   return (
     <main className={styles.main}>
-      {t("titolo")}
       <HeroVideo videoURL={"/video/vts.mp4"} data={HeroDataLang} />
       <Parallax imageURL="/image/mainimage.jpg" alt="test" height="300px" />
       <AnimatedSection>
-        <h2>porcoddio</h2>
+        <h2>test</h2>
+      </AnimatedSection>
+      <AnimatedSection>
+        <LeafletMain address={address} />
+      </AnimatedSection>
+      <AnimatedSection>
+        <SliderTimer
+          data={[
+            { image: "/image/mainimage.jpg", titolo: "mannaggia" },
+            {
+              image: "/image/mainimage.jpg",
+              titolo: "mannaggia mannaggia",
+            },
+          ]}
+        />
       </AnimatedSection>
     </main>
   );
