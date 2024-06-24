@@ -16,9 +16,9 @@ function Parallax({
   const paralRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: paralRef,
-    offset: ["start end", "end end"],
+    offset: ["start end", "end start"],
   });
-  const parallax = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const parallax = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
   return (
     <motion.div
