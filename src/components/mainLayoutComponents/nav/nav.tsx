@@ -51,19 +51,9 @@ function NavBar() {
         <div className={style.mainNavBar__logo}>
           <Link href="/">
             {isHome() ? (
-              <Image
-                src="/image/logo-white.svg"
-                width={121}
-                height={94}
-                alt="logo"
-              />
+              <Image src="/image/logo.svg" width={121} height={94} alt="logo" />
             ) : (
-              <Image
-                src="/image/logo-black.svg"
-                width={121}
-                height={94}
-                alt="logo"
-              />
+              <Image src="/image/logo.svg" width={121} height={94} alt="logo" />
             )}
           </Link>
         </div>

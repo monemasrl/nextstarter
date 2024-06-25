@@ -30,24 +30,24 @@ export default async function Home({
   };
   return (
     <main className={styles.main}>
-      <HeroVideo videoURL={"/video/vts.mp4"} data={HeroDataLang} />
-      <Parallax imageURL="/image/mainimage.jpg" alt="test" height="300px" />
-      <AnimatedSection>
-        <h2>test</h2>
-      </AnimatedSection>
-      <AnimatedSection>
-        <LeafletMain address={address} />
-      </AnimatedSection>
+      <HeroVideo videoURL={"/video/video.mp4"} data={HeroDataLang} />
       <AnimatedSection>
         <SliderTimer
           data={[
             { image: "/image/mainimage.jpg", titolo: "mannaggia" },
             {
-              image: "/image/mainimage.jpg",
+              image: "/image/mainimage2.jpg",
               titolo: "mannaggia mannaggia",
             },
           ]}
         />
+      </AnimatedSection>
+      <Parallax imageURL="/image/mainimage2.jpg" alt="test" height="300px" />
+      <AnimatedSection>
+        <h2>test</h2>
+      </AnimatedSection>
+      <AnimatedSection>
+        <LeafletMain address={address} />
       </AnimatedSection>
     </main>
   );
