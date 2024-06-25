@@ -3,10 +3,12 @@ import styles from "./page.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import heroData from "../../../public/data/hero.json";
+import homeData from "../../../public/data/home.json";
 import Parallax from "@/components/parallax/parallax";
 import AnimatedSection from "@/components/mainLayoutComponents/sections/animatedSection";
 import LeafletMain from "@/components/map/Leaflet";
 import SliderTimer from "@/components/sliders/sliderTimer";
+import Tabs from "@/components/tabs/tabs";
 
 /**
  * PAGINA
@@ -44,7 +46,7 @@ export default async function Home({
       </AnimatedSection>
       <Parallax imageURL="/image/mainimage2.jpg" alt="test" height="300px" />
       <AnimatedSection>
-        <h2>test</h2>
+        <Tabs data={homeData[locale as keyof typeof homeData].tabs} />
       </AnimatedSection>
       <AnimatedSection>
         <LeafletMain address={address} />
