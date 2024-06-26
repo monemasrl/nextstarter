@@ -4,7 +4,7 @@ import style from "./HeroVideo.module.scss";
 import { easeOut, motion } from "framer-motion";
 import { useState } from "react";
 import LoaderSite from "@/components/loaders/loader";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 
 /**

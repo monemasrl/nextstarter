@@ -34,7 +34,6 @@ function SliderName({
   setCurrentSlide: React.Dispatch<React.SetStateAction<number>>;
   currentIndex: number;
 }) {
-  console.log(currentSlide);
   const [slideThumbBar, setSlideThumbBar] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
