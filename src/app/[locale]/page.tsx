@@ -1,4 +1,4 @@
-import HeroVideo from "@/components/heros/video/HeroVideo";
+import HeroVideo from "@/components/heros/HeroVideo";
 import styles from "./page.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
@@ -12,6 +12,7 @@ import SliderTimer from "@/components/sliders/sliderTimer";
 import Tabs from "@/components/tabs/tabs";
 import Staff from "@/components/staff/staff";
 import TitleAnimations from "@/components/animations/titleAnimations";
+import Image from "next/image";
 
 /**
  * PAGINA

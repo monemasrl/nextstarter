@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  @include title();
 }
 * {
   box-sizing: border-box;

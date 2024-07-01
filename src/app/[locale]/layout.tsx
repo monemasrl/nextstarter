@@ -9,7 +9,7 @@ import { locales } from "../../configTranslations";
 import { unstable_setRequestLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -40,7 +40,7 @@ export default async function RootLayout({
         {/* COMPONENTE PER INSERIRE I META JSONLD PER GOOGLE  */}
         <JsonldMetaData metadata={meta} />
       </head>
-      <body className={inter.className}>
+      <body className={inter.variable}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Nav />
           <SmoothScrolling>{children}</SmoothScrolling>
