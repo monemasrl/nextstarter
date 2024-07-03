@@ -33,3 +33,31 @@
   color: black;
   cursor: pointer;
 }
+.navbar_mobile {
+  .wrapperSwitcher {
+    width: 100%;
+    align-items: center;
+    .switcher {
+      position: relative;
+      overflow: visible;
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      height: auto;
+      justify-content: center;
+      pointer-events: visible;
+    }
+    .icon {
+      display: none;
+    }
+    ul {
+      li {
+        height: 30px;
+        color: white !important;
+        &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
