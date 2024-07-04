@@ -1,0 +1,16 @@
+.wrapperCookie {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.887);
+  width: 30%;
+  bottom: 0;
+  z-index: 1000;
+  padding: 2rem;
+  h2 {
+    text-transform: uppercase;
+  }
+  button {
+    background-color: $darkblue;
+    color: white;
+    margin-right: 1rem;
+  }
+}

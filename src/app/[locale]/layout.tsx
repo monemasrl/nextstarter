@@ -8,6 +8,7 @@ import Nav from "@/components/mainLayoutComponents/nav/nav";
 import { locales } from "../../configTranslations";
 import { unstable_setRequestLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import CookieConsentBanner from "@/components/cookieConsent/cookieConsent";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -41,6 +42,7 @@ export default async function RootLayout({
         <JsonldMetaData metadata={meta} />
       </head>
       <body className={inter.variable}>
+        <CookieConsentBanner />
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Nav />
           <SmoothScrolling>{children}</SmoothScrolling>

@@ -11,7 +11,7 @@ import LeafletMain from "@/components/map/Leaflet";
 import SliderTimer from "@/components/sliders/sliderTimer";
 import Tabs from "@/components/tabs/tabs";
 import Staff from "@/components/staff/staff";
-import TitleAnimations from "@/components/animations/titleAnimations";
+import TitleAnimations from "@/components/mainLayoutComponents/sections/titleAnimations/titleAnimations";
 import Image from "next/image";
 
 /**
@@ -36,7 +36,11 @@ export default async function Home({
   };
   return (
     <main className={styles.main}>
-      <HeroVideo videoURL={"/video/video.mp4"} data={HeroDataLang} />
+      <HeroVideo
+        typeOfData="video"
+        URL={"/video/video.mp4"}
+        data={HeroDataLang}
+      />
       <TitleAnimations testo="Mannaggia" />
       <AnimatedSection>
         <SliderTimer
