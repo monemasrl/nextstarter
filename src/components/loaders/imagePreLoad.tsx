@@ -1,56 +1,79 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import style from "./loader.module.scss";
+
 export const ImagePreload = ({
   src,
   alt,
   width,
   height,
-  full,
-  lazy,
+  isLazy,
+  type,
 }: {
-  src: string;
+  src: StaticImageData | string;
   alt: string;
   width?: number;
   height?: number;
-  full?: boolean;
-  lazy?: boolean;
+  isLazy?: boolean;
+  type: "fill" | "hero" | "fixed";
 }) => {
   const [reveal, setReveal] = useState(false);
   const visibility = reveal ? "visible" : "hidden";
   const loader = reveal ? "none" : "inline-block";
-  console.log(full, "full");
+
   return (
     <div
+      className={`${style.imagePreloadWrapper} ${
+        type === "hero"
+          ? style.hero
+          : type === "fill"
+          ? style.fill
+          : style.fixed
+      }`}
       style={{
         width: "100%",
         position: "relative",
-        height: full ? "100%" : "auto",
       }}
     >
-      {full ? (
+      {type === "hero" && (
         <Image
-          src={src}
+          className={style.imagePreload}
+          src={src || ""}
           alt={alt}
           layout="fill"
-          style={{ visibility }}
+          style={{ visibility, objectFit: "cover", width: "100%" }}
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
-         priority={lazy}
+          priority={true}
+          sizes="(max-width: 440px) 30vw,(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
         />
-      ) : (
+      )}
+      {type === "fixed" && (
         <Image
-          src={src}
+          src={src || ""}
           alt={alt}
           width={width}
           height={height}
-          style={{ visibility }}
+          style={{ visibility, width: "100%" }}
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
-          priority={lazy}
+          priority={isLazy}
+          sizes="(max-width: 480px) 40vw,"
+        />
+      )}
+      {type === "fill" && (
+        <Image
+          className={style.imagePreload}
+          src={src || ""}
+          alt={alt}
+          layout="fill"
+          onError={() => setReveal(true)}
+          onLoadingComplete={() => setReveal(true)}
+          priority={isLazy}
+          sizes="(max-width: 480px) 50vw, (max-width: 1200px) 100vw, 100vw"
         />
       )}
       <AnimatePresence>
@@ -60,7 +83,7 @@ export const ImagePreload = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.1 }}
           >
             <motion.div
               initial={{ opacity: 0.3, scale: 0.95 }}
@@ -74,23 +97,12 @@ export const ImagePreload = ({
                 },
               }}
             >
-              <svg
-                width="178"
-                height="182"
-                viewBox="0 0 178 182"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M70.6207 32.1858H1V181.377H147.919V107.216"
-                  stroke="white"
-                />
-                <path d="M6.11182 40.3269V175.697H65.561" stroke="white" />
-                <path
-                  d="M87.6319 121.542L144.606 0.500013L177.234 0.500015L101.685 172.06L75.5737 172.06L17.2739 44.0677L51.4505 44.0677L86.7244 121.537L87.172 122.519L87.6319 121.542Z"
-                  stroke="white"
-                />
-              </svg>
+              <Image
+                src="/image/florencebarbellstudiologo.png"
+                width={300}
+                height={58}
+                alt="logo"
+              />
             </motion.div>
           </motion.div>
         )}
