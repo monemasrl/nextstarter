@@ -12,7 +12,8 @@ import SliderTimer from "@/components/sliders/sliderTimer";
 import Tabs from "@/components/tabs/tabs";
 import Staff from "@/components/staff/staff";
 import TitleAnimations from "@/components/mainLayoutComponents/sections/titleAnimations/titleAnimations";
-import Image from "next/image";
+
+import InstagramPost from "@/components/instagram/instagram";
 
 /**
  * PAGINA
@@ -62,6 +63,12 @@ export default async function Home({
       </AnimatedSection>
       <AnimatedSection>
         <Staff data={staffData[locale as keyof typeof homeData]} />
+      </AnimatedSection>
+      <AnimatedSection>
+        <InstagramPost
+          token="IGQWROUU9MaW9PU1ZA2UVlVN3dTTGJ6cXpFckJtWGNNT2FlUGtubHhBQUZAZAT0Q4MS1JaFFqOGRDLUtuOEZAwOTBjaEhJbDJYeWVWa1luN3c0UlRMTjU5WjJfVlZA4eFZA0VlNCZA3ZAFckJvbU96SDRsenk3SDBZAUHRGbnMZD"
+          client="aa5c815437121a7a8f6c2db93d8195f4"
+        />
       </AnimatedSection>
     </main>
   );

@@ -15,6 +15,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
+
 /** FUNZIONE NEXT PER INSERIRE I METADATA NELL' HEAD */
 export async function generateMetadata({
   params: { locale },

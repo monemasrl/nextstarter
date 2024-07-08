@@ -116,10 +116,9 @@ function HeroVideo({
           <ImagePreload
             src={URL}
             alt="heroImage"
-            full={false}
+            type="hero"
             width={1920}
             height={1080}
-            lazy={false}
           />
         )}
       </div>
