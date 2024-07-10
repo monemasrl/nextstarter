@@ -131,7 +131,7 @@ function Slider({ data }: { data: Tdata[] }) {
         })}
       </Swiper>
       <Swiper
-        onSwiper={setThumbsSwiper}
+        onSwiper={() => setThumbsSwiper}
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
