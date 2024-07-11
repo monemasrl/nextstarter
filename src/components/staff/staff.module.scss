@@ -2,9 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 2rem;
-  li {
+  max-width: 960px;
+  margin: 4rem auto;
+  gap: 2rem;
+  @media #{$tablet} {
+    justify-content: center;
+  }
+  > li {
     position: relative;
+    cursor: pointer;
   }
   &__nome {
     font-size: 1.5rem;
@@ -26,6 +32,10 @@
     position: relative;
     width: 349px;
     height: 490px;
+    @media #{$tablet} {
+      width: 320px;
+      height: 400px;
+    }
     img {
       object-fit: cover;
     }

@@ -6,11 +6,13 @@ function AnimatedSection({
   animateOnce = true,
   width,
   children,
+  classname,
 }: {
   overflowHidden?: boolean;
   animateOnce?: boolean;
   children?: React.ReactNode;
   width?: string;
+  classname?: string;
 }) {
   return (
     <motion.section
@@ -20,6 +22,7 @@ function AnimatedSection({
         width: `${width ? width : "100%"}`,
         margin: "0 auto",
       }}
+      className={classname}
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}

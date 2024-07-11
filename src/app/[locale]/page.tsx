@@ -11,8 +11,7 @@ import LeafletMain from "@/components/map/Leaflet";
 import SliderTimer from "@/components/sliders/sliderTimer";
 import Tabs from "@/components/tabs/tabs";
 import Staff from "@/components/staff/staff";
-import TitleAnimations from "@/components/mainLayoutComponents/sections/titleAnimations/titleAnimations";
-
+import TitleAnimations from "@/components/animations/titleAnimations";
 /**
  * PAGINA
  * Utilizzare le pagine per fetchare i dati e passarli ai componenti
@@ -40,7 +39,7 @@ export default async function Home({
         URL={"/video/video.mp4"}
         data={HeroDataLang}
       />
-      <TitleAnimations testo="Mannaggia" />
+      <TitleAnimations animation="letter" testo="Mannaggia" />
       <AnimatedSection>
         <SliderTimer
           data={[
