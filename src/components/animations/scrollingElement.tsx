@@ -36,12 +36,7 @@ function ScrollingElement({
       }}
     >
       {" "}
-      <Image
-        src={src}
-        alt="Picture of the author"
-        layout="fill"
-        quality={100}
-      />
+      <Image src={src} alt="Picture of the author" layout="fill" quality={90} />
     </motion.div>
   );
 }
