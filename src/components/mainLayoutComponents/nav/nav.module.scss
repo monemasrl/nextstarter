@@ -77,22 +77,28 @@
       display: flex;
       gap: 2rem;
       position: relative;
+
       .hasSub {
         &:hover {
           .subNav {
             opacity: 1;
+            height: auto;
           }
         }
       }
       .subNav {
         position: absolute;
+        overflow: hidden;
+        height: 0px;
         width: 100%;
         top: 20px;
         opacity: 0;
-        transition: all ease-in-out 0.3s;
+        transition: opacity ease-in-out 0.3s;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 0;
         li {
           padding: 0.5rem 0;
-          background-color: black;
+
           cursor: pointer;
           a {
             white-space: nowrap;
