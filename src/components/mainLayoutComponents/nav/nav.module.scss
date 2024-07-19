@@ -3,7 +3,7 @@
   padding: 0 1rem;
   z-index: 200;
   &__home {
-    background: linear-gradient(rgb(10, 43, 82) 7%, rgb(50 92 175 / 0%) 100%);
+    background: linear-gradient(rgb(3, 17, 33) 7%, rgb(50 92 175 / 0%) 100%);
     .mainNavBar {
       padding-bottom: 5rem;
       a {
@@ -31,8 +31,14 @@
   font-size: $size-navbar;
   align-items: center;
   gap: 2rem;
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
+  &__logo {
+    img {
+      width: 200px;
+      height: 40px;
+    }
+  }
   &__home {
     ul li a {
       color: white;
@@ -67,8 +73,34 @@
       }
     }
     &__nav {
+      width: 450px;
       display: flex;
       gap: 2rem;
+      position: relative;
+      .hasSub {
+        &:hover {
+          .subNav {
+            opacity: 1;
+          }
+        }
+      }
+      .subNav {
+        position: absolute;
+        width: 100%;
+        top: 20px;
+        opacity: 0;
+        transition: all ease-in-out 0.3s;
+        li {
+          padding: 0.5rem 0;
+          background-color: black;
+          cursor: pointer;
+          a {
+            white-space: nowrap;
+            padding-left: 1rem;
+            color: white;
+          }
+        }
+      }
       a {
         text-decoration: none;
         text-transform: uppercase;
@@ -99,7 +131,7 @@
   display: flex;
   top: 0;
   left: 0;
-  background-color: $blue;
+  background-color: black;
   width: 100%;
   height: 100vh;
   align-items: center;

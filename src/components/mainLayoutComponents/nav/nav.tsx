@@ -6,14 +6,14 @@ import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useLocale, useTranslations } from "next-intl";
-import Switcher from "@/components/languageSwitcher/switcher";
+import { useLocale } from "next-intl";
+import navigation from "../../../../public/data/navigation.json";
 
 function NavBar() {
   const pathN = usePathname();
   const locale = useLocale();
   const [mobile, setMobile] = useState(false);
-  const t = useTranslations("Navigation");
+  const t = navigation[locale as keyof typeof navigation];
 
   function isHome() {
     if (pathN === "/" + locale) {
@@ -21,23 +21,6 @@ function NavBar() {
     }
     return false;
   }
-
-  const data = {
-    nav: [
-      {
-        title: t("azienda.titolo"),
-        url: "/" + locale + t("azienda.url"),
-      },
-      {
-        title: t("contatti.titolo"),
-        url: t("contatti.url"),
-      },
-      {
-        title: t("lavora_con_noi.titolo"),
-        url: "/" + locale + t("lavora_con_noi.url"),
-      },
-    ],
-  };
 
   useEffect(() => {
     setMobile(false);
@@ -51,9 +34,19 @@ function NavBar() {
         <div className={style.mainNavBar__logo}>
           <Link href="/">
             {isHome() ? (
-              <Image src="/image/logo.svg" width={121} height={94} alt="logo" />
+              <Image
+                src="/image/florencebarbellstudiologo.png"
+                width={300}
+                height={58}
+                alt="logo"
+              />
             ) : (
-              <Image src="/image/logo.svg" width={121} height={94} alt="logo" />
+              <Image
+                src="/image/florencebarbellstudiologoInverted.jpg"
+                width={300}
+                height={58}
+                alt="logo"
+              />
             )}
           </Link>
         </div>
@@ -69,21 +62,34 @@ function NavBar() {
           </div>
           <hr />
           <ul className={style.mainNavBar__navBlock__nav}>
-            {data.nav.map((item, index) => (
-              <li
-                className={`${pathN.includes(item.url) && style.activeLink}`}
-                key={index}
-              >
-                {item.title === "contatti" ? (
-                  <a href={item.url}>{item.title}</a>
-                ) : (
-                  <Link href={item.url}>{item.title}</Link>
-                )}
-              </li>
-            ))}
-            <li>
-              <Switcher isHome={isHome()} />
-            </li>
+            {t.map(
+              (
+                item: {
+                  name?: string;
+                  url?: string;
+                  sub?: { name: string; url: string }[];
+                },
+                index
+              ) => (
+                <li
+                  className={`${
+                    pathN.includes(item.url || "") && style.activeLink
+                  } ${item.sub && style.hasSub}`}
+                  key={index}
+                >
+                  <Link href={item.url || ""}>{item.name}</Link>
+                  {item.sub && (
+                    <ul className={style.subNav}>
+                      {item.sub?.map((subItem, index) => (
+                        <li key={index}>
+                          <Link href={subItem.url || ""}>{subItem.name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              )
+            )}
           </ul>
         </div>
         <div
@@ -112,22 +118,22 @@ function NavBar() {
               </div>
               <a href="/">
                 <Image
-                  src="/image/logo-white.svg"
-                  width={121}
-                  height={94}
+                  src="/image/florencebarbellstudiologo.png"
+                  width={220}
+                  height={40}
                   alt="logo"
                 />
               </a>
 
               <ul className={style.navMobile__nav}>
-                {data.nav.map((item, index) => (
+                {t.map((item, index) => (
                   <li
                     className={`${
-                      pathN.includes(item.url) && style.activeLink
+                      pathN.includes(item.url || "") && style.activeLink
                     }`}
                     key={index}
                   >
-                    <Link href={item.url}>{item.title}</Link>
+                    <Link href={item.url || ""}>{item.name}</Link>
                   </li>
                 ))}
               </ul>
