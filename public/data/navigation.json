@@ -2,46 +2,8 @@
     "it": [
         {
             "name": "Servizi",
-            "sub": [
-                {
-                    "name": "Personal training",
-                    "url": "/it/servizi/personal-training"
-                },
-                {
-                    "name": "Preparazione atletica",
-                    "url": "/it/servizi/preparazione-atletica"
-                },
-                {
-                    "name": "Allenamento funzionale",
-                    "url": "/it/servizi/allenamento-funzionale"
-                },
-                {
-                    "name": "Pesistica Olimpica",
-                    "url": "/it/servizi/pesistica-olimpica"
-                },
-                {
-                    "name": "Powerlifting",
-                    "url": "/it/servizi/powerlifting"
-                },
-                {
-                    "name": "Riatletizzazione e recupero post infortunio",
-                    "url": "/it/servizi/riatletizzazione-e-recupero-post-infortunio"
-                },
-                {
-                    "name": "Valutazione funzionale e test di performance",
-                    "url": "/it/servizi/valutazione-funzionale-e-test-di-performance"
-                },
-                {
-                    "name": "Valutazione della composizione corporea",
-                    "url": "/it/servizi/valutazione-della-composizione-corporea"
-                },
-                {
-                    "name": "Coaching Online",
-                    "url": "/it/servizi/coaching-online"
-                }
-            ]
+            "url": "/it/servizi"
         },
-      
         {
             "name": "Blog",
             "url": "/it/blog"
