@@ -83,12 +83,16 @@ function Form() {
       setError(null);
       const myForm = event.target;
       const formData = new FormData(myForm);
-      const res = await fetch("/__formcontatti.html", {
+      const res = await fetch("/netlifyFormContatti.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
       if (res.status === 200) {
+        setNome("");
+        setCognome("");
+        setMail("");
+        setMessaggio("");
         setStatus("ok");
       } else {
         setStatus("error");
@@ -118,6 +122,7 @@ function Form() {
           type="text"
           name="nome"
           id="nome"
+          value={nome}
           required
         />
       </p>
@@ -129,6 +134,7 @@ function Form() {
           }}
           type="text"
           name="cognome"
+          value={cognome}
           id=""
           required
         />
@@ -139,6 +145,7 @@ function Form() {
           onChange={(e) => setMail(e.target.value)}
           type="email"
           name="email"
+          value={mail}
           id="youremail"
           required
         />
@@ -151,6 +158,7 @@ function Form() {
             setMessaggio(e.target.value);
           }}
           name="message"
+          value={messaggio}
           id="yourmessage"
           required
         ></textarea>
