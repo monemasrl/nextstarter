@@ -13,6 +13,7 @@ Checklist con fondamentali per pubblicazione
 - - [ ] loading.tsx
 - - [ ] error.tsx
 - [ ] Definire e includere una favicon
+- [ ] cookies, privacy pagine e modale
 
 # Codice
 
