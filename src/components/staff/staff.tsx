@@ -1,9 +1,6 @@
 "use client";
 import style from "./staff.module.scss";
 import Image from "next/image";
-import { createPortal } from "react-dom";
-import FixedModal from "../modals/fixedModal";
-import { useState } from "react";
 
 type Tdata = {
   image: string;
@@ -16,11 +13,9 @@ type Tdata = {
   eta: number;
 };
 function SingleStaff({ data }: { data: Tdata }) {
-  const [openModal, setModal] = useState<boolean>(false);
-
   return (
     <>
-      <li onClick={() => setModal(true)}>
+      <li>
         <div className={style.staff__image}>
           <Image src={data.image} alt={data.nome} layout="fill" />
         </div>
@@ -29,7 +24,6 @@ function SingleStaff({ data }: { data: Tdata }) {
           <span>{data.ruolo}</span>
         </div>
       </li>
-      <FixedModal data={data} modalState={openModal} closeModal={setModal} />
     </>
   );
 }

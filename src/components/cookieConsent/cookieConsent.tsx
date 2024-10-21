@@ -11,7 +11,7 @@ const CookieConsentBanner = () => {
   useEffect(() => {
     const consentCookie = cookie.get("cookieConsent");
 
-    if (!consentCookie) {
+    if (!consentCookie || consentCookie === "rejected") {
       setShowBanner(true);
     }
   }, []);
@@ -23,7 +23,7 @@ const CookieConsentBanner = () => {
 
   const handleReject = () => {
     setShowBanner(false);
-    cookie.set("cookieConsent", "rejected", { expires: 365 });
+    cookie.set("cookieConsent", "rejected");
     push("https://google.com");
   };
 
@@ -36,7 +36,11 @@ const CookieConsentBanner = () => {
       <h2>
         Questo sito utilizza cookies per migliorare l&apos;esperienza utente
       </h2>
-      <p>Clicca su accetta per continuare</p>
+      <p>
+        Clicca su accetta per continuare, o consulta la nostra{" "}
+        <a href="/cookie">cookie policy</a> e{" "}
+        <a href="/privacy">privacy policy</a>
+      </p>
       <button onClick={handleAccept}>Accetta</button>
       <button onClick={handleReject}>Rifiuta</button>
     </div>
