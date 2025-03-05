@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import style from "./loader.module.scss";
@@ -57,13 +57,14 @@ export const ImagePreload = ({
           alt={alt}
           width={width}
           height={height}
-          style={{ visibility, width: "100%" }}
+          style={{ visibility }}
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
           priority={isLazy}
           sizes="(max-width: 480px) 40vw,"
         />
       )}
+
       {type === "fill" && (
         <Image
           className={style.imagePreload}
@@ -72,19 +73,13 @@ export const ImagePreload = ({
           layout="fill"
           onError={() => setReveal(true)}
           onLoadingComplete={() => setReveal(true)}
-          priority={isLazy}
+          priority={!isLazy}
           sizes="(max-width: 480px) 50vw, (max-width: 1200px) 100vw, 100vw"
         />
       )}
       <AnimatePresence>
         {!reveal && (
-          <motion.div
-            className={style.loader}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.1 }}
-          >
+          <motion.div className={style.loader}>
             <motion.div
               initial={{ opacity: 0.3, scale: 0.95 }}
               animate={{
@@ -98,7 +93,7 @@ export const ImagePreload = ({
               }}
             >
               <Image
-                src="/image/florencebarbellstudiologo.png"
+                src="/image/leiloader.svg"
                 width={300}
                 height={58}
                 alt="logo"
